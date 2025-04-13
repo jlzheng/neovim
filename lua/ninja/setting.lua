@@ -13,4 +13,12 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.incsearch = true
+vim.opt.hlsearch = true
 
+vim.opt.termguicolors = true
+
+vim.opt.autoindent = true
+
+-- if vim.fn.has("gui_running") then
+--     vim.opt.guifont = "JetBrainsMono\\ NFM:h12"
+-- end
