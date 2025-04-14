@@ -59,6 +59,15 @@ return {
               }
             }
           })
+        end,
+        ruff = function()
+            require('lspconfig').ruff.setup({
+                init_options = {
+                    settings = {
+                        logLevel = 'debug',
+                    }
+                }
+            })
         end
       }
     })
