@@ -22,3 +22,25 @@ vim.opt.autoindent = true
 -- if vim.fn.has("gui_running") then
 --     vim.opt.guifont = "JetBrainsMono\\ NFM:h12"
 -- end
+
+-- https://freedium.cfd/https://tomdeneire.medium.com/five-ways-to-display-lsp-diagnostics-in-neovim-c0387ddc6e63
+vim.diagnostic.config(
+    {
+        underline = false,
+        virtual_text = {
+            spacing = 2,
+            prefix = "●",
+        },
+        update_in_insert = false,
+        severity_sort = true,
+        signs = {
+            text = {
+                -- Alas nerdfont icons don't render properly on Medium!
+                [vim.diagnostic.severity.ERROR] = " ",
+                [vim.diagnostic.severity.WARN] = " ",
+                [vim.diagnostic.severity.HINT] = " ",
+                [vim.diagnostic.severity.INFO] = " ",
+            },
+        },
+    }
+)
