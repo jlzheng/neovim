@@ -19,6 +19,9 @@ vim.opt.termguicolors = true
 
 vim.opt.autoindent = true
 
+-- Disable deprecated messages
+vim.deprecate = function() end
+
 -- if vim.fn.has("gui_running") then
 --     vim.opt.guifont = "JetBrainsMono\\ NFM:h12"
 -- end
